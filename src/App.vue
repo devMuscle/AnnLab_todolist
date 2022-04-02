@@ -1,17 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Vue 입니다"/>
+	<Todolist />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Todolist from './components/Todolist.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+	  Todolist
+  },
+  data : function() { 
+	  return {
+		  hello : 'a'
+	  }
+  },
+  methods: {
+	  childCall() {
+		  console.log("call")
+	  }
   }
 }
 </script>
